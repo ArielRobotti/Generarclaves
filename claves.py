@@ -17,6 +17,8 @@ def generarClave(seguridad=8,includ=None,exclud=None):
 	
 	>>> generarClave(seguridad=100000, includ='ÇÑñáéíóúÁÉÍÓÚ', exclud='@?¿¡!-_*+=')
 	out áÚÓÉCS5eSéúóíXTSDÓÉx2vqWñ4V
+
+	Contacto autor: arielrobotti@gmail.com
 	'''
 	caracteres=('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_*+@=/¿?¡!')
 	if includ!=None:
@@ -28,8 +30,8 @@ def generarClave(seguridad=8,includ=None,exclud=None):
 			caracteres=caracteres.replace(i,'')
 	clave=''
 	for i in range(seguridad):
+		if i>=25:
+			break
 		caracter=caracteres[randrange(len(caracteres))]
 		clave=clave+caracter
-		if i>25:
-			break
 	return clave
