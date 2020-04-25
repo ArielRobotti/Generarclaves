@@ -1,8 +1,8 @@
 from random import randrange
 def generarClave(seguridad=8,includ=None,exclud=None):
 	'''-------------------------------------------------------
-	Esta funcion sirve para crear claves aleatorias una longitud
-	de 1 a 25 caracteres, o de 8 si no se especifica.
+	Esta funcion sirve para crear claves aleatorias de una 
+	longitud de 1 a 25 caracteres, o de 8 si no se especifica.
 	-------------------------------------------------------
 	seguridad: Establece mediante un entero, la cantidad de caracteres de la clave
 	includ: recibe un string con los caracteres extra que el usuario desee incluir
